@@ -1,8 +1,9 @@
 <div>
     <h1 class="text-3xl">Comments</h1>
+    @error('newComment') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
     <div>
         @if (session()->has('message'))
-        <div class="p-3 bg-green text-green-800 rounded shadow-sm">
+        <div class="p-3 bg-green-300 text-green-800 rounded shadow-sm">
             {{ session('message') }}
         </div>
         @endif
@@ -12,9 +13,10 @@
         @if($image)
         <img src={{$image}} width="200" />
         @endif
+
         <input type="file" id="image" wire:change="$emit('fileChoosen')">
     </section>
-    @error('newComment') <span class="text-danger text-xs">{{ $message }}</span> @enderror
+
     <form class="my-4 flex" wire:submit.prevent="addComment">
         <input type="text" class="w-full rounded border shadow p-2 mr-2 my-2" placeholder="What's in your mind."
             wire:model.debounce.500ms="newComment">
@@ -34,23 +36,24 @@
                 wire:click="remove({{$comment->id}})"></i>
         </div>
         <p class="text-gray-800">{{$comment->body}}</p>
-        {{-- @if($comment->image)
+        @if($comment->image)
         <img src="{{$comment->imagePath}}" />
-        @endif --}}
+        @endif
     </div>
     @endforeach
 
     {{$comments->links('pagination-links')}}
 </div>
 
-{{-- <script>
+<script>
     window.livewire.on('fileChoosen', () => {
         let inputField = document.getElementById('image')
         let file = inputField.files[0]
         let reader = new FileReader();
+
         reader.onloadend = () => {
             window.livewire.emit('fileUpload', reader.result)
         }
         reader.readAsDataURL(file);
     })
-</script> --}}
+</script>
