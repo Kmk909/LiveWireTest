@@ -1,4 +1,4 @@
-@extends('welcome')
+@extends('layouts.app')
 @section('content')
 <div class="my-10 flex justify-center w-full">
     <section class="border rounded shadow-lg p-4 w-6/12 bg-gray-200">

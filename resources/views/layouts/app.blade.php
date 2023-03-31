@@ -52,11 +52,15 @@
         <div class="py-4">
             <a class="mx-3" href="/login">Login</a>
             <a class="mx-3" href="/register">Register</a>
+
         </div>
         {{-- @endguest --}}
     </div>
     <div class="my-10 w-full flex justify-center">
+
         @yield('content')
+
+
     </div>
 
 </body>

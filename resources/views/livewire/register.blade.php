@@ -1,4 +1,4 @@
-@extends('welcome')
+@extends('layouts.app')
 @section('content')
 <div class="my-10 flex justify-center w-full">
     <section class="border rounded shadow-lg p-4 w-6/12 bg-gray-200">
@@ -6,7 +6,7 @@
         {{$test}}
         <hr>
         <form class="my-4" wire:submit.prevent="submit">
-            {{-- <div class="flex justify-around my-8">
+            <div class="flex justify-around my-8">
                 <div class="flex flex-wrap w-10/12">
                     <input type="name" class="p-2 rounded border shadow-sm w-full" wire:model="form.name"
                         placeholder="Name" />
@@ -32,7 +32,7 @@
                     <input type="text" class="p-2 rounded border shadow-sm w-full" placeholder="Confirm Password"
                         wire:model="form.password_confirmation" />
                 </div>
-            </div> --}}
+            </div>
             <div class="flex justify-around my-8">
                 <div class="flex flex-wrap w-10/12">
                     <input type="submit" value="Register"
