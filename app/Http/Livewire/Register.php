@@ -11,4 +11,9 @@ class Register extends Component
     {
         return view('livewire.register');
     }
+
+    public function submit()
+    {
+        dd($this->test);
+    }
 }

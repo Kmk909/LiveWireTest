@@ -19,6 +19,8 @@ class Comments extends Component
         'ticketSelected',
     ];
 
+    // for testing purpose whether can I use this variable from tickets.blade.php in livewire
+    // public $test = "This is from comments.php";
     public $image;
     public $newComment;
     public $ticketId;
@@ -67,7 +69,6 @@ class Comments extends Component
 
     public function handleFileUpload($imageData)
     {
-
         $this->image = $imageData;
     }
 

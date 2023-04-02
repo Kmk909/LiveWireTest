@@ -44,7 +44,7 @@
 
 <body class="flex flex-wrap justify-center">
     <div class="flex w-full justify-between px-4 bg-purple-900 text-white">
-        <a class="mx-3 py-4" href="/">Home</a>
+        <a class="mx-3 py-4" href="/home">Home</a>
         {{-- @auth
         <livewire:logout />
         @endauth

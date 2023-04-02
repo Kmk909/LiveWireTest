@@ -6,7 +6,7 @@
         {{$test}}
         <hr>
         <form class="my-4" wire:submit.prevent="submit">
-            <div class="flex justify-around my-8">
+            {{-- <div class="flex justify-around my-8">
                 <div class="flex flex-wrap w-10/12">
                     <input type="name" class="p-2 rounded border shadow-sm w-full" wire:model="form.name"
                         placeholder="Name" />
@@ -32,11 +32,12 @@
                     <input type="text" class="p-2 rounded border shadow-sm w-full" placeholder="Confirm Password"
                         wire:model="form.password_confirmation" />
                 </div>
-            </div>
+            </div> --}}
             <div class="flex justify-around my-8">
                 <div class="flex flex-wrap w-10/12">
-                    <input type="submit" value="Register"
-                        class="p-2 bg-gray-800 text-white w-full rounded tracking-wider cursor-pointer" />
+                    {{-- <input type="submit" value="Register"
+                        class="p-2 bg-gray-800 text-white w-full rounded tracking-wider cursor-pointer" /> --}}
+                    <button type="submit" value="Register" class="p-2 bg-blue-500 w-20 rounded shadow text-white">Add</button>
                 </div>
             </div>
         </form>
